@@ -1,0 +1,29 @@
+!!! 5
+html(lang="en")
+  head
+    title Users
+  body
+    - if (typeof(flash) != 'undefined')
+      p= flash
+    h2 Login
+    form(method='post', action='/login')
+      label Username:
+        input(name='username', type='text')
+      br
+      label Password:
+        input(name='password', type='password')
+      br
+      button(type='submit') Login
+
+    h2 Register
+    form(method='post', action='/register')
+      label Username:
+        input(name='username', type='text')
+      br
+      label Password:
+        input(name='password', type='password')
+      br
+      label Confirm Password:
+        input(name='confirm_password', type='password')
+      br
+      button(type='submit') Register 
